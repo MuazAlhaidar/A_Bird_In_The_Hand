@@ -1,0 +1,13 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "4.27",
+	"Category": "",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "A_Bird_In_The_Hand",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	]
+}
