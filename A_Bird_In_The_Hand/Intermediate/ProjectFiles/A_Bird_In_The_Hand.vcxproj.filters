@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\A_Bird_In_The_Hand.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{B972F87B-A90C-438E-BDBB-284CA30F41DE}</UniqueIdentifier>
+      <UniqueIdentifier>{7DF6AD17-6C1A-4922-9C2D-76BE4ED7D43D}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\A_Bird_In_The_Hand.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{CE749F67-4F5A-461D-A358-53B729763D3D}</UniqueIdentifier>
+      <UniqueIdentifier>{BA94A458-5E2A-4030-AB6A-B73D6FE9665C}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -30,7 +30,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\A_Bird_In_The_Hand">
-      <UniqueIdentifier>{4A8FCC0F-0804-49CE-B773-A0A6214DA5D9}</UniqueIdentifier>
+      <UniqueIdentifier>{23CE97B1-B3E7-44EA-9DC1-7302506DEB9C}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\A_Bird_In_The_Hand\A_Bird_In_The_Hand.Build.cs">
       <Filter>Source\A_Bird_In_The_Hand</Filter>
@@ -57,6 +57,18 @@
       <Filter>Source\A_Bird_In_The_Hand</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\A_Bird_In_The_Hand\A_Bird_In_The_HandPlayerController.h">
+      <Filter>Source\A_Bird_In_The_Hand</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\A_Bird_In_The_Hand\Interactable.cpp">
+      <Filter>Source\A_Bird_In_The_Hand</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\A_Bird_In_The_Hand\Interactable.h">
+      <Filter>Source\A_Bird_In_The_Hand</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\A_Bird_In_The_Hand\Pickup.cpp">
+      <Filter>Source\A_Bird_In_The_Hand</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\A_Bird_In_The_Hand\Pickup.h">
       <Filter>Source\A_Bird_In_The_Hand</Filter>
     </ClInclude>
   </ItemGroup>

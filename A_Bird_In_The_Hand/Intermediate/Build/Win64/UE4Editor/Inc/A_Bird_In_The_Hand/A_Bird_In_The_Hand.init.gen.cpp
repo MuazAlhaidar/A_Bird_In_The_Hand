@@ -21,8 +21,8 @@ void EmptyLinkFunctionForGeneratedCodeA_Bird_In_The_Hand_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0xE35B0245,
-				0xE01CFA9A,
+				0xEF379D62,
+				0xD8B01726,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);
