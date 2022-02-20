@@ -1,0 +1,30 @@
+﻿  Using 'git status' to determine working set for adaptive non-unity build (D:\Github\A_Bird_In_The_Hand).
+  Creating makefile for A_Bird_In_The_HandEditor (game project files are newer)
+  Parsing headers for A_Bird_In_The_HandEditor
+    Running UnrealHeaderTool "D:\Github\A_Bird_In_The_Hand\A_Bird_In_The_Hand\A_Bird_In_The_Hand.uproject" "D:\Github\A_Bird_In_The_Hand\A_Bird_In_The_Hand\Intermediate\Build\Win64\A_Bird_In_The_HandEditor\Development\A_Bird_In_The_HandEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\Omunam\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
+  LogInit: Display: Loading text-based GConfig....
+  Reflection code generated for A_Bird_In_The_HandEditor in 7.0487007 seconds
+  Building A_Bird_In_The_HandEditor...
+  Using Visual Studio 2022 14.31.31104 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+  Building 16 actions with 16 processes...
+    [1/16] SharedPCH.Engine.ShadowErrors.cpp
+    Detected compiler newer than Visual Studio 2019, please update min version checking in WindowsPlatformCompilerSetup.h
+    [2/16] A_Bird_In_The_Hand.cpp
+    [3/16] A_Bird_In_The_Hand.init.gen.cpp
+    [4/16] A_Bird_In_The_HandGameMode.gen.cpp
+    [5/16] Interactable.cpp
+    [6/16] A_Bird_In_The_HandGameMode.cpp
+    [7/16] Interactable.gen.cpp
+    [8/16] A_Bird_In_The_HandCharacter.cpp
+    [9/16] A_Bird_In_The_HandCharacter.gen.cpp
+    [10/16] A_Bird_In_The_HandPlayerController.gen.cpp
+    [11/16] A_Bird_In_The_HandPlayerController.cpp
+    [12/16] Pickup.gen.cpp
+    [13/16] Pickup.cpp
+    [14/16] UE4Editor-A_Bird_In_The_Hand-0004.lib
+       Creating library D:\Github\A_Bird_In_The_Hand\A_Bird_In_The_Hand\Intermediate\Build\Win64\UE4Editor\Development\A_Bird_In_The_Hand\UE4Editor-A_Bird_In_The_Hand-0004.lib and object D:\Github\A_Bird_In_The_Hand\A_Bird_In_The_Hand\Intermediate\Build\Win64\UE4Editor\Development\A_Bird_In_The_Hand\UE4Editor-A_Bird_In_The_Hand-0004.exp
+    [15/16] UE4Editor-A_Bird_In_The_Hand-0004.dll
+       Creating library D:\Github\A_Bird_In_The_Hand\A_Bird_In_The_Hand\Intermediate\Build\Win64\UE4Editor\Development\A_Bird_In_The_Hand\UE4Editor-A_Bird_In_The_Hand-0004.suppressed.lib and object D:\Github\A_Bird_In_The_Hand\A_Bird_In_The_Hand\Intermediate\Build\Win64\UE4Editor\Development\A_Bird_In_The_Hand\UE4Editor-A_Bird_In_The_Hand-0004.suppressed.exp
+    [16/16] A_Bird_In_The_HandEditor.target
+  Total time in Parallel executor: 17.54 seconds
+  Total execution time: 26.39 seconds

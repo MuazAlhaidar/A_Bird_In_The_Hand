@@ -14,8 +14,19 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define A_BIRD_IN_THE_HAND_Pickup_generated_h
 
 #define A_Bird_In_The_Hand_Source_A_Bird_In_The_Hand_Pickup_h_15_SPARSE_DATA
-#define A_Bird_In_The_Hand_Source_A_Bird_In_The_Hand_Pickup_h_15_RPC_WRAPPERS
-#define A_Bird_In_The_Hand_Source_A_Bird_In_The_Hand_Pickup_h_15_RPC_WRAPPERS_NO_PURE_DECLS
+#define A_Bird_In_The_Hand_Source_A_Bird_In_The_Hand_Pickup_h_15_RPC_WRAPPERS \
+	virtual void Use_Implementation(); \
+ \
+	DECLARE_FUNCTION(execUse);
+
+
+#define A_Bird_In_The_Hand_Source_A_Bird_In_The_Hand_Pickup_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execUse);
+
+
+#define A_Bird_In_The_Hand_Source_A_Bird_In_The_Hand_Pickup_h_15_EVENT_PARMS
+#define A_Bird_In_The_Hand_Source_A_Bird_In_The_Hand_Pickup_h_15_CALLBACK_WRAPPERS
 #define A_Bird_In_The_Hand_Source_A_Bird_In_The_Hand_Pickup_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAPickup(); \
@@ -36,7 +47,7 @@ public: \
 
 #define A_Bird_In_The_Hand_Source_A_Bird_In_The_Hand_Pickup_h_15_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API APickup(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	NO_API APickup(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(APickup) \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, APickup); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(APickup); \
@@ -48,8 +59,6 @@ public:
 
 
 #define A_Bird_In_The_Hand_Source_A_Bird_In_The_Hand_Pickup_h_15_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API APickup() { }; \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API APickup(APickup&&); \
@@ -61,13 +70,17 @@ public: \
 
 
 #define A_Bird_In_The_Hand_Source_A_Bird_In_The_Hand_Pickup_h_15_PRIVATE_PROPERTY_OFFSET
-#define A_Bird_In_The_Hand_Source_A_Bird_In_The_Hand_Pickup_h_12_PROLOG
+#define A_Bird_In_The_Hand_Source_A_Bird_In_The_Hand_Pickup_h_12_PROLOG \
+	A_Bird_In_The_Hand_Source_A_Bird_In_The_Hand_Pickup_h_15_EVENT_PARMS
+
+
 #define A_Bird_In_The_Hand_Source_A_Bird_In_The_Hand_Pickup_h_15_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	A_Bird_In_The_Hand_Source_A_Bird_In_The_Hand_Pickup_h_15_PRIVATE_PROPERTY_OFFSET \
 	A_Bird_In_The_Hand_Source_A_Bird_In_The_Hand_Pickup_h_15_SPARSE_DATA \
 	A_Bird_In_The_Hand_Source_A_Bird_In_The_Hand_Pickup_h_15_RPC_WRAPPERS \
+	A_Bird_In_The_Hand_Source_A_Bird_In_The_Hand_Pickup_h_15_CALLBACK_WRAPPERS \
 	A_Bird_In_The_Hand_Source_A_Bird_In_The_Hand_Pickup_h_15_INCLASS \
 	A_Bird_In_The_Hand_Source_A_Bird_In_The_Hand_Pickup_h_15_STANDARD_CONSTRUCTORS \
 public: \
@@ -80,6 +93,7 @@ public: \
 	A_Bird_In_The_Hand_Source_A_Bird_In_The_Hand_Pickup_h_15_PRIVATE_PROPERTY_OFFSET \
 	A_Bird_In_The_Hand_Source_A_Bird_In_The_Hand_Pickup_h_15_SPARSE_DATA \
 	A_Bird_In_The_Hand_Source_A_Bird_In_The_Hand_Pickup_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	A_Bird_In_The_Hand_Source_A_Bird_In_The_Hand_Pickup_h_15_CALLBACK_WRAPPERS \
 	A_Bird_In_The_Hand_Source_A_Bird_In_The_Hand_Pickup_h_15_INCLASS_NO_PURE_DECLS \
 	A_Bird_In_The_Hand_Source_A_Bird_In_The_Hand_Pickup_h_15_ENHANCED_CONSTRUCTORS \
 private: \

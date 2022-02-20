@@ -12,31 +12,31 @@
 UCLASS()
 class A_BIRD_IN_THE_HAND_API APickup : public AInteractable {
 
-    GENERATED_BODY()
+	GENERATED_BODY()
 
-public:
-    APickup();
+ public:
+	APickup();
 
-    virtual void BeginPlay() override;
+	virtual void BeginPlay() override;
 
-    virtual void Interact_Implementation() override;
+	virtual void Interact_Implementation() override;
 
-    UFUNCTION(BlueprintNativeEvent)
-    void Use();
-    virtual void Use_Implementation();
+	UFUNCTION(BlueprintNativeEvent)
+	void Use();
+	virtual void Use_Implementation();
 
-    UPROPERTY(EditAnywhere, Category = "Pickup Properties")
-    UTexture2D *PickupThumbnail;
+	UPROPERTY(EditAnywhere, Category = "Pickup Properties")
+	UTexture2D *PickupThumbnail;
 
-    UPROPERTY(EditAnywhere, Category = "Pickup Properties")
-    FString ItemName;
+	UPROPERTY(EditAnywhere, Category = "Pickup Properties")
+	FString ItemName;
 
-    UPROPERTY(EditAnywhere, Category = "Pickup Properties")
-    int32 Value;
+	UPROPERTY(EditAnywhere, Category = "Pickup Properties")
+	int32 Value;
 
-    /*
-    This is called when the item is picked up
-    and needs to be cleaned up from the level
-    */
-    void OnPickedUp();
+	/*
+	This is called when the item is picked up
+	and needs to be cleaned up from the level
+	*/
+	void OnPickedUp();
 };

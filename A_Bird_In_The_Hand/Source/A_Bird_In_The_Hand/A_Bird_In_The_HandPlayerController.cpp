@@ -7,106 +7,87 @@
 #include "A_Bird_In_The_HandCharacter.h"
 #include "Engine/World.h"
 
-AA_Bird_In_The_HandPlayerController::AA_Bird_In_The_HandPlayerController()
-{
+AA_Bird_In_The_HandPlayerController::AA_Bird_In_The_HandPlayerController() {
 	bShowMouseCursor = true;
 	DefaultMouseCursor = EMouseCursor::Crosshairs;
 }
 
-void AA_Bird_In_The_HandPlayerController::PlayerTick(float DeltaTime)
-{
+void AA_Bird_In_The_HandPlayerController::PlayerTick(float DeltaTime) {
 	Super::PlayerTick(DeltaTime);
 
 	// keep updating the destination every tick while desired
-	if (bMoveToMouseCursor)
-	{
+	if (bMoveToMouseCursor) {
 		MoveToMouseCursor();
 	}
 }
 
-void AA_Bird_In_The_HandPlayerController::SetupInputComponent()
-{
+void AA_Bird_In_The_HandPlayerController::SetupInputComponent() {
 	// set up gameplay key bindings
 	Super::SetupInputComponent();
 
 	InputComponent->BindAction("SetDestination", IE_Pressed, this, &AA_Bird_In_The_HandPlayerController::OnSetDestinationPressed);
 	InputComponent->BindAction("SetDestination", IE_Released, this, &AA_Bird_In_The_HandPlayerController::OnSetDestinationReleased);
 
-	// support touch devices 
+	// support touch devices
 	InputComponent->BindTouch(EInputEvent::IE_Pressed, this, &AA_Bird_In_The_HandPlayerController::MoveToTouchLocation);
 	InputComponent->BindTouch(EInputEvent::IE_Repeat, this, &AA_Bird_In_The_HandPlayerController::MoveToTouchLocation);
 
 	InputComponent->BindAction("ResetVR", IE_Pressed, this, &AA_Bird_In_The_HandPlayerController::OnResetVR);
 }
 
-void AA_Bird_In_The_HandPlayerController::OnResetVR()
-{
+void AA_Bird_In_The_HandPlayerController::OnResetVR() {
 	UHeadMountedDisplayFunctionLibrary::ResetOrientationAndPosition();
 }
 
-void AA_Bird_In_The_HandPlayerController::MoveToMouseCursor()
-{
-	if (UHeadMountedDisplayFunctionLibrary::IsHeadMountedDisplayEnabled())
-	{
-		if (AA_Bird_In_The_HandCharacter* MyPawn = Cast<AA_Bird_In_The_HandCharacter>(GetPawn()))
-		{
-			if (MyPawn->GetCursorToWorld())
-			{
+void AA_Bird_In_The_HandPlayerController::MoveToMouseCursor() {
+	if (UHeadMountedDisplayFunctionLibrary::IsHeadMountedDisplayEnabled()) {
+		if (AA_Bird_In_The_HandCharacter *MyPawn = Cast<AA_Bird_In_The_HandCharacter>(GetPawn())) {
+			if (MyPawn->GetCursorToWorld()) {
 				UAIBlueprintHelperLibrary::SimpleMoveToLocation(this, MyPawn->GetCursorToWorld()->GetComponentLocation());
 			}
 		}
-	}
-	else
-	{
+	} else {
 		// Trace to see what is under the mouse cursor
 		FHitResult Hit;
 		GetHitResultUnderCursor(ECC_Visibility, false, Hit);
 
-		if (Hit.bBlockingHit)
-		{
+		if (Hit.bBlockingHit) {
 			// We hit something, move there
 			SetNewMoveDestination(Hit.ImpactPoint);
 		}
 	}
 }
 
-void AA_Bird_In_The_HandPlayerController::MoveToTouchLocation(const ETouchIndex::Type FingerIndex, const FVector Location)
-{
+void AA_Bird_In_The_HandPlayerController::MoveToTouchLocation(const ETouchIndex::Type FingerIndex, const FVector Location) {
 	FVector2D ScreenSpaceLocation(Location);
 
 	// Trace to see what is under the touch location
 	FHitResult HitResult;
 	GetHitResultAtScreenPosition(ScreenSpaceLocation, CurrentClickTraceChannel, true, HitResult);
-	if (HitResult.bBlockingHit)
-	{
+	if (HitResult.bBlockingHit) {
 		// We hit something, move there
 		SetNewMoveDestination(HitResult.ImpactPoint);
 	}
 }
 
-void AA_Bird_In_The_HandPlayerController::SetNewMoveDestination(const FVector DestLocation)
-{
-	APawn* const MyPawn = GetPawn();
-	if (MyPawn)
-	{
+void AA_Bird_In_The_HandPlayerController::SetNewMoveDestination(const FVector DestLocation) {
+	APawn *const MyPawn = GetPawn();
+	if (MyPawn) {
 		float const Distance = FVector::Dist(DestLocation, MyPawn->GetActorLocation());
 
 		// We need to issue move command only if far enough in order for walk animation to play correctly
-		if ((Distance > 120.0f))
-		{
+		if ((Distance > 120.0f)) {
 			UAIBlueprintHelperLibrary::SimpleMoveToLocation(this, DestLocation);
 		}
 	}
 }
 
-void AA_Bird_In_The_HandPlayerController::OnSetDestinationPressed()
-{
+void AA_Bird_In_The_HandPlayerController::OnSetDestinationPressed() {
 	// set flag to keep updating destination until released
 	bMoveToMouseCursor = true;
 }
 
-void AA_Bird_In_The_HandPlayerController::OnSetDestinationReleased()
-{
+void AA_Bird_In_The_HandPlayerController::OnSetDestinationReleased() {
 	// clear flag to indicate we should stop updating the destination
 	bMoveToMouseCursor = false;
 }

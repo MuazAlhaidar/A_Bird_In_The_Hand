@@ -1003,3 +1003,65 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2022.02.20-15.39.20:291][776]LogSlate: Only BGRA pngs, bmps or icos are supported in by External Image Picker
 [2022.02.20-15.40.48:783][315]LogSlate: Window 'Project Settings' being destroyed
 [2022.02.20-15.40.48:786][315]LogSlate: Window 'Project Settings' being destroyed
+[2022.02.20-15.41.43:156][616]LogVSAccessor: Warning: Couldn't goto line number '1' in 'D:/Github/A_Bird_In_The_Hand/A_Bird_In_The_Hand/Source/A_Bird_In_The_Hand/A_Bird_In_The_HandCharacter.h'
+[2022.02.20-15.41.43:221][616]LogVSAccessor: Warning: Couldn't goto line number '1' in 'D:/Github/A_Bird_In_The_Hand/A_Bird_In_The_Hand/Source/A_Bird_In_The_Hand/A_Bird_In_The_HandCharacter.cpp'
+[2022.02.20-15.42.59:517][284]LogHotReload: New module detected: UE4Editor-A_Bird_In_The_Hand-0004.dll
+[2022.02.20-15.42.59:862][286]LogHotReload: Starting Hot-Reload from IDE
+[2022.02.20-15.42.59:870][286]LogSlate: Took 0.003691 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2022.02.20-15.42.59:909][286]LogClass: Could not find existing class Pickup in package /Script/A_Bird_In_The_Hand for HotReload, assuming new class
+[2022.02.20-15.42.59:909][286]LogClass: Function Use is new.
+[2022.02.20-15.42.59:913][286]LogHotReload: Re-instancing Pickup after hot-reload.
+[2022.02.20-15.42.59:917][286]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'A_Bird_In_The_Hand' in 0.0002 seconds. Added 5 classes and 2 folders.
+[2022.02.20-15.42.59:918][286]Display: HotReload successful (1 functions remapped  0 scriptstructs remapped)
+[2022.02.20-15.42.59:954][286]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0070 seconds. Added 3827 classes and 930 folders.
+[2022.02.20-15.42.59:968][286]Display: HotReload took  0.1s.
+[2022.02.20-16.15.51:814][ 29]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/TopDownCPP/Blueprints/TopDownCharacter.TopDownCharacter
+[2022.02.20-16.15.52:173][ 29]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'BlueprintGraph' in 0.0005 seconds. Added 126 classes and 0 folders.
+[2022.02.20-16.16.46:089][290]LogTabManager: Warning: Unable to insert tab 'Document'.
+[2022.02.20-16.16.46:089][290]LogTabManager: Warning: Cannot spawn tab because no spawner is registered for 'Document'
+[2022.02.20-16.16.46:110][290]LogSlate: The tab "Document" attempted to spawn in layout 'Standalone_BlueprintDefaults_Layout_v6' but failed for some reason. An "unrecognized tab" will be returned instead.
+[2022.02.20-16.16.46:120][290]LogSlate: Took 0.000315 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-BoldCondensed.ttf' (158K)
+[2022.02.20-16.16.48:947][587]LogSlate: Window 'Construction Script' being destroyed
+[2022.02.20-16.16.48:954][587]LogSlate: Window 'Construction Script' being destroyed
+[2022.02.20-16.16.50:391][755]LogSlate: The tab "Document" attempted to spawn in layout 'Standalone_BlueprintDefaults_Layout_v6' but failed for some reason. An "unrecognized tab" will be returned instead.
+[2022.02.20-16.16.51:625][901]LogSlate: Window 'Event Graph' being destroyed
+[2022.02.20-16.16.51:633][901]LogSlate: Window 'Event Graph' being destroyed
+[2022.02.20-16.16.52:732][ 32]LogSlate: Window 'My Blueprint' being destroyed
+[2022.02.20-16.16.52:741][ 32]LogSlate: Window 'My Blueprint' being destroyed
+[2022.02.20-16.17.06:218][628]LogSlate: Window 'TopDownCharacter' being destroyed
+[2022.02.20-16.17.06:229][628]LogWorld: UWorld::CleanupWorld for World_2, bSessionEnded=true, bCleanupResources=true
+[2022.02.20-16.17.06:229][628]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.02.20-16.17.06:265][628]LogSlate: Window 'A_Bird_In_The_Hand - Unreal Editor' being destroyed
+[2022.02.20-16.17.06:267][628]LogWindowsTextInputMethodSystem: Display: IME system deactivated.
+[2022.02.20-16.17.06:287][628]LogWindowsTextInputMethodSystem: Display: IME system deactivated.
+[2022.02.20-16.17.06:301][628]LogToolMenus: Warning: Menu already registered : LevelEditor.MainMenu
+[2022.02.20-16.17.06:301][628]LogToolMenus: Warning: Menu already registered : LevelEditor.MainMenu.File
+[2022.02.20-16.17.06:301][628]LogToolMenus: Warning: Menu already registered : LevelEditor.MainMenu.Window
+[2022.02.20-16.17.06:301][628]LogToolMenus: Warning: Menu already registered : LevelEditor.MainMenu.Edit
+[2022.02.20-16.17.06:301][628]LogToolMenus: Warning: Menu already registered : LevelEditor.MainMenu.Help
+[2022.02.20-16.17.06:301][628]LogToolMenus: Warning: Menu already registered : LevelEditor.LevelEditorToolBar.SourceControl
+[2022.02.20-16.17.06:301][628]LogToolMenus: Warning: Menu already registered : LevelEditor.LevelEditorToolBar.Cinematics
+[2022.02.20-16.17.06:301][628]LogToolMenus: Warning: Menu already registered : LevelEditor.LevelEditorToolBar.BuildComboButton
+[2022.02.20-16.17.06:301][628]LogToolMenus: Warning: Menu already registered : LevelEditor.LevelEditorToolBar.BuildComboButton.LightingQuality
+[2022.02.20-16.17.06:301][628]LogToolMenus: Warning: Menu already registered : LevelEditor.LevelEditorToolBar.BuildComboButton.LightingInfo.LightingDensity
+[2022.02.20-16.17.06:302][628]LogToolMenus: Warning: Menu already registered : LevelEditor.LevelEditorToolBar.BuildComboButton.LightingInfo.LightingResolution
+[2022.02.20-16.17.06:302][628]LogToolMenus: Warning: Menu already registered : LevelEditor.LevelEditorToolBar.BuildComboButton.LightingInfo
+[2022.02.20-16.17.06:302][628]LogToolMenus: Warning: Menu already registered : LevelEditor.LevelEditorToolBar.EditorModes
+[2022.02.20-16.17.06:302][628]LogToolMenus: Warning: Menu already registered : LevelEditor.LevelEditorToolBar.CompileComboButton
+[2022.02.20-16.17.06:302][628]LogToolMenus: Warning: Menu already registered : LevelEditor.LevelEditorToolBar.LevelToolbarQuickSettings
+[2022.02.20-16.17.06:302][628]LogToolMenus: Warning: Menu already registered : LevelEditor.LevelEditorToolBar.OpenBlueprint
+[2022.02.20-16.17.06:302][628]LogToolMenus: Warning: Menu already registered : LevelEditor.LevelEditorToolBar
+[2022.02.20-16.17.06:313][628]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.02.20-16.17.06:317][628]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.02.20-16.17.06:320][628]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.02.20-16.17.06:324][628]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.02.20-16.17.06:509][628]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/TopDownCPP/Blueprints/TopDownCharacter.TopDownCharacter
+[2022.02.20-16.18.00:795][738]LogSlate: Window 'TopDownCharacter' being destroyed
+[2022.02.20-16.18.00:806][738]LogWorld: UWorld::CleanupWorld for World_4, bSessionEnded=true, bCleanupResources=true
+[2022.02.20-16.18.00:806][738]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.02.20-16.18.00:849][738]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/TopDownCPP/Blueprints/TopDownCharacter.TopDownCharacter
+[2022.02.20-16.18.26:927][678]LogSlate: Took 0.003349 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Italic.ttf' (157K)
+[2022.02.20-16.19.46:785][ 85]LogSlate: Window 'TopDownCharacter' being destroyed
+[2022.02.20-16.19.46:792][ 85]LogSlate: Window 'TopDownCharacter' being destroyed
+[2022.02.20-16.19.46:794][ 85]LogWorld: UWorld::CleanupWorld for World_6, bSessionEnded=true, bCleanupResources=true
+[2022.02.20-16.19.46:794][ 85]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated

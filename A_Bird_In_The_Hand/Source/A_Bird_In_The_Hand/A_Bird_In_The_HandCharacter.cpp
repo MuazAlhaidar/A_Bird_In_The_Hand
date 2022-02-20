@@ -53,6 +53,14 @@ AA_Bird_In_The_HandCharacter::AA_Bird_In_The_HandCharacter() {
     // Activate ticking in order to update the cursor every frame.
     PrimaryActorTick.bCanEverTick = true;
     PrimaryActorTick.bStartWithTickEnabled = true;
+
+
+    Reach = 250.0f;
+
+    InputComponent->BindAction("Interact", IE_Pressed, this,
+                               &AA_Bird_In_The_HandCharacter::Interact);
+    InputComponent->BindAction("ToggleInventory", IE_Pressed, this,
+                               &AA_Bird_In_The_HandCharacter::ToggleInventory);
 }
 
 void AA_Bird_In_The_HandCharacter::Tick(float DeltaSeconds) {
@@ -78,5 +86,49 @@ void AA_Bird_In_The_HandCharacter::Tick(float DeltaSeconds) {
             CursorToWorld->SetWorldLocation(TraceHitResult.Location);
             CursorToWorld->SetWorldRotation(CursorR);
         }
+    }
+
+    CheckforInteractables();
+}
+
+void AA_Bird_In_The_HandCharacter::ToggleInventory() {
+    // TODO create HUD first
+    // Code to open inventory goes here
+}
+
+void AA_Bird_In_The_HandCharacter::Interact() {
+  if (CurrentInteractable != nullptr) {
+    CurrentInteractable->Interact_Implementation();
+  }
+}
+
+void AA_Bird_In_The_HandCharacter::CheckforInteractables() {
+
+    // To linetrace, get start and end traces
+    FVector StartTrace = TopDownCameraComponent->GetComponentLocation();
+    FVector EndTrace =
+        (TopDownCameraComponent->GetForwardVector() * Reach) + StartTrace;
+
+    // Declare a hitrresult to store the raycast hit in
+    FHitResult HitResult;
+
+    // Initialize the query params - ignore the actor
+    FCollisionQueryParams CQP;
+    CQP.AddIgnoredActor(this);
+
+    // Cast the line trace
+    GetWorld()->LineTraceSingleByChannel(HitResult, StartTrace, EndTrace,
+                                         ECC_WorldDynamic, CQP);
+
+    AInteractable *PotentialInteractable =
+        Cast<AInteractable>(HitResult.GetActor());
+
+    if (PotentialInteractable == NULL) {
+        HelpText = FString("");
+        CurrentInteractable = nullptr;
+        return;
+    } else {
+        CurrentInteractable = PotentialInteractable;
+        HelpText = PotentialInteractable->InteractableHelpText;
     }
 }

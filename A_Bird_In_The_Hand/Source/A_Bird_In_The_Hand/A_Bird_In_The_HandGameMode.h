@@ -7,13 +7,10 @@
 #include "A_Bird_In_The_HandGameMode.generated.h"
 
 UCLASS(minimalapi)
-class AA_Bird_In_The_HandGameMode : public AGameModeBase
-{
+class AA_Bird_In_The_HandGameMode : public AGameModeBase {
+
 	GENERATED_BODY()
 
-public:
+ public:
 	AA_Bird_In_The_HandGameMode();
 };
-
-
-
